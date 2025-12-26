@@ -1,0 +1,77 @@
+.game-arena {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 92, 185, 0.1) 0%, rgba(77, 162, 255, 0.05) 100%);
+}
+
+.history-section {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(77, 162, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.history-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #4DA2FF;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.history-item {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid #4DA2FF;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.history-item:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-left-color: #00D9FF;
+}
+
+@media (max-width: 768px) {
+  .game-arena {
+    padding: 1rem;
+  }
+
+  .history-section {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .history-section h3 {
+    font-size: 1rem;
+  }
+
+  .history-item {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+}

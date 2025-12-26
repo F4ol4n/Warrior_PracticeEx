@@ -1,0 +1,225 @@
+.warrior-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 200px);
+  align-items: center;
+}
+
+.warrior-card {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(77, 162, 255, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(77, 162, 255, 0.1);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.warrior-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.warrior-card-header h2 {
+  margin: 0;
+  color: #4DA2FF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.warrior-card-content {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.warrior-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #4DA2FF 0%, #005CB9 100%);
+  border-radius: 15px;
+  border: 2px solid rgba(77, 162, 255, 0.5);
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(77, 162, 255, 0.3);
+}
+
+.avatar-icon {
+  font-size: 4rem;
+}
+
+.warrior-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stat-label {
+  color: #a0c4ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  color: #ffffff;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(77, 162, 255, 0.2);
+}
+
+.level-row {
+  margin-bottom: 0;
+}
+
+.level-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4DA2FF;
+  text-shadow: 0 2px 10px rgba(77, 162, 255, 0.4);
+}
+
+.xp-section {
+  margin-top: auto;
+}
+
+.xp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.xp-label {
+  color: #a0c4ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.xp-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.xp-bar-container {
+  width: 100%;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(77, 162, 255, 0.2);
+}
+
+.xp-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4DA2FF 0%, #00D9FF 100%);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(77, 162, 255, 0.6);
+}
+
+.warrior-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.train-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #4DA2FF 0%, #00D9FF 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(77, 162, 255, 0.4);
+  text-transform: uppercase;
+}
+
+.train-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(77, 162, 255, 0.6);
+  background: linear-gradient(135deg, #5DB2FF 0%, #1AE9FF 100%);
+}
+
+.train-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.train-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gas-info {
+  text-align: center;
+  color: #a0c4ff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .warrior-card {
+    padding: 1.5rem;
+  }
+
+  .warrior-card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .warrior-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-icon {
+    font-size: 3rem;
+  }
+
+  .stat-row {
+    justify-content: center;
+  }
+
+  .level-value {
+    font-size: 2.5rem;
+  }
+}
